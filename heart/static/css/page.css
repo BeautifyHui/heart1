@@ -1,0 +1,85 @@
+.hello{
+	width:100%;height:100%;display:flex;flex-direction: column;
+}
+.section{
+	height: auto;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	position: relative;
+	flex:1;
+}
+#top{
+	width: 34.5rem;
+	height: 7rem;
+	position: absolute;
+	top: 0;
+	background: url(/static/img/top1.jpg) no-repeat;
+	background-size:100% ;
+	z-index: 4;
+	/*display: none;*/
+}
+.topnone{
+	display: none;
+}
+.topL{
+	width: 2rem;
+	margin-left: 1rem;
+}
+.topL img {
+	width: 2rem;
+	height: 2rem;
+	margin-top: 2rem;
+}
+/*                                     搜索部分---------------*/
+.seach{
+	width: 100%;
+	height: 3.2rem;
+	z-index: 3;
+	position: absolute;
+	top: 1rem;
+	left: 5%;
+	/*display: none;*/
+}
+.seach a{
+	/*display: block;*/
+	border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    height: 3rem;
+    width:90%;
+    background: #Fff;
+    display: flex;
+    overflow: hidden;
+
+
+}
+.Seachspan{
+	display: flex;
+	width: 100%;
+}
+.Seachspan img{
+	width: 2rem;
+	height: 1.6rem;
+	margin: 2% 0 0 2%;
+}
+.Seachspan input{
+	border: 0;
+	border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    height: 3rem;
+    text-align: left;
+    width: 80%;
+    font-size: 1.2rem;
+    color: #666;
+    padding-left: 5rem;
+    margin: 0 auto 0 10%;
+    background: #FFFFFF
+}
+/*                           -------------  轮播部分     -*/
+.mainw{
+	width: 100%;
+	height: 24.5rem;
+	background: #008800;
+	overflow: auto;
+}
+.mainImg{
+	width: 34.5rem;
+	height: 24.5rem;
+}
