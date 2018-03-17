@@ -4,7 +4,7 @@
 			<li v-for="(item,$index) in items" @click="toggle($index)">
 				<span :class="{shadow:active==$index}">
 					<span></span>
-					<i>{{item.i}}</i>
+					<i class="i1">{{item.i}}</i>
 				</span>
 			</li>
 		</ul>
@@ -161,7 +161,7 @@ li{
 .shadow>span{
 	border-left:0.4rem solid #fc665e;margin-right: 1.4rem;
 }
-i{
+.i1{
 	margin-right: 2.4rem;font-style: normal;
 }
 li>i{

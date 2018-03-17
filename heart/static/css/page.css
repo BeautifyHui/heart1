@@ -70,7 +70,8 @@
     color: #666;
     padding-left: 5rem;
     margin: 0 auto 0 10%;
-    background: #FFFFFF
+    background: #FFFFFF;
+    outline: none;
 }
 /*                           -------------  轮播部分     -*/
 .mainw{

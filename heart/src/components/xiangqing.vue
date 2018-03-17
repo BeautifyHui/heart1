@@ -2,7 +2,7 @@
 	<div class="xiangqing">
 		<div class="b">
 			<div class="big">
-				<a href="javascript:history.back(-1)"><i class="iconfont icon-error" ></i></a>
+				<a href="./#/all"><i class="iconfont icon-error" ></i></a>
 				<i class="iconfont icon-home"></i>
 				<div class="swip">
 					<img :src=rid.goodsThumb alt="" />
@@ -59,7 +59,7 @@
 			</span>
 			<span>
 				<i class="iconfont icon-bags"></i>
-				<span>加入购物车</span>
+				<span @click="Cartadd()">加入购物车</span>
 			</span>
 			<span>
 				<button>立即购买</button>
@@ -75,6 +75,8 @@ export default({
 		return{
 			arr:[],
 			rid:[],
+			list : [],
+			num : 1,
 			id:parseInt(location.href.split("?")[1].split("=")[1])
 		};
 	},
@@ -85,10 +87,17 @@ export default({
 			for(var i = 0,a = this.arr.length; i < a;i++){
 				if(this.arr[i].goodsId == this.id){
 					this.rid = this.arr[i];
+					this.list =(this.arr[i].goodsName + "," +this.arr[i].brandName +"," + this.num+","  + this.arr[i].salePrice)
+					localStorage.setItem("shop" , this.list)
 					return;
 				}
 			}
 		})
+	},
+	methods : {
+		Cartadd(){
+			location.href ="http://localhost:8080/#/Cart?id="+this.id
+		}
 	}
 })
 </script>
@@ -186,7 +195,13 @@ export default({
 	font-size:1.3rem;color:#767676;font-weight: 900;
 }
 .bot{
-	height:4.4rem;background: #fff;display:flex;justify-content: space-around;
+	width: 100%;
+	height:4.4rem;
+	background: #fff;
+	display:flex;
+	justify-content: space-around;
+	position: fixed;
+	bottom: 0;
 }
 .bot>span{
 	width:24%;display: flex;flex-direction: column;align-items: center;justify-content: center;font-size:1rem;color:#fc655e

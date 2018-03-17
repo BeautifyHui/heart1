@@ -28,9 +28,6 @@
 import axios from 'axios'
 	export default({
 		name:"login",
-		components:{
-
-		},
 		methods:{
 			cl:function(){
 				var tel = document.getElementById("tel").value;
@@ -46,7 +43,8 @@ import axios from 'axios'
 						.then(function (response) {
     						if(response.data.status == 1){
     							alert(response.data.msg);
-    							window.location.href = "http://localhost:8080/HelloWorld"
+    							sessionStorage.setItem("certificate",tel)
+    							window.location.href = "http://localhost:8080/#/myhome"
     						}else{
     							alert(response.data.msg);
     							window.location.reload()
@@ -64,7 +62,6 @@ import axios from 'axios'
 				}
 			}
 		}
-		
 	})
 </script>
 <style src='./../../static/font/iconfont.css'></style>

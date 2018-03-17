@@ -32,12 +32,15 @@ html {
   background: #fff; 
   z-index: 999;
   }
-  .foot .four {
+  .foot>a {
     color: #333;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    .foot .four{
+    	color:#fc655e;
+    }
   .foot img {
     width: 4.7rem;
     height: 4.2rem;

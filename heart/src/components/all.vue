@@ -1,7 +1,7 @@
 <template>
 	<div class="all">
 	<div class="top">
-		<a href="javascript:history.go(-1)">
+		<a href="./HelloWorld">
 			<i class="iconfont icon-error"></i>
 		</a>
 		<div class="box">

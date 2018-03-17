@@ -22,21 +22,29 @@ export default new Router({
       name: 'HelloWorld',
       component: HelloWorld
    	},
+   	{
+      path: '/Cart',
+      name: 'Cart',
+      component:()=>import('../components/Cart')
+    },
     {
       path: '/type',
       name: 'type',
-      component: type
+      component: type,
+      children:[
+      	 {
+	      	path: '/conti',
+	      	name: 'conti',
+	      	component: conti
+	   	 	},
+		    {
+		      path: '/type',
+		      name: 'cont',
+		      component: cont
+		    }
+      ]
     },
-    {
-      path: '/conti',
-      name: 'conti',
-      component: conti
-    },
-    {
-      path: '/cont',
-      name: 'cont',
-      component: cont
-    },
+   
     {
       path: '/regeist',
       name: 'regeist',

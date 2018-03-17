@@ -1,6 +1,6 @@
 <template>
 	<div class="conti">
-	        <div class="swiper-slide" >
+	        <div >
 	        	<h2>7</h2>
 	        	<div class="brand" v-for="de in detil7" @click="jump">
 	        		<div class="con1">
@@ -9,7 +9,7 @@
 	        		<p>{{de.namep}}&nbsp;{{de.namel}}</p>
 	        	</div>
 	        </div>
-	        <div class="swiper-slide" >
+	        <div >
 	        	<h2>A</h2>
 	        	<div class="brand" v-for="de in detila" @click="jump">
 	        		<div class="con1">
@@ -57,9 +57,8 @@ export default{
 <style src='./../../static/common.css'></style>
 <style scoped="scoped">
 .conti{
-	width:100%;display:flex;flex-direction: column;color:#474747;
+	width:100%;display:flex;flex-direction: column;color:#474747;flex:1;overflow: scroll;
 }
-
 h2{
 	text-align:center;font-weight:bold;background:#F7F7F7;color:#333;line-height: 2.4rem;
 }
